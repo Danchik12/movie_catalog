@@ -10,11 +10,11 @@ export default function Header(){
 
 return(
 <div className={s.Header}>
-
 <NavLink  to="/" className={s.brand}>
 <i className='bx bx-movie-play bx-md'></i>
-Movie App
+Movies
 </NavLink>
+
 <Search/>
 
 

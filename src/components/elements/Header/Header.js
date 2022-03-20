@@ -11,11 +11,13 @@ export default function Header(){
 return(
 <div className={s.Header}>
 <NavLink  to="/" className={s.brand}>
-<i className='bx bx-movie-play bx-md'></i>
-Movies
+SMART<span style={{'color':'#81ae65'}}>Movies</span>
 </NavLink>
 
 <Search/>
+<NavLink  to="/auth" className={s.auth}>
+Вход
+</NavLink>
 
 
 

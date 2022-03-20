@@ -1,29 +1,28 @@
-$gray:#9b9a97;
+
 
 .search{
 	
 	display: flex;
 	align-items: center;
 	border-radius: 30px;
-	background-color: #000;
-	border: 1px solid rgba($gray,0.4);
-	margin-right: 15px;
+	background-color: #3a3f45;
+	margin-bottom:15px;
 	margin-top: 15px;
 
-
+i{
+	color:#989896;
+	margin-right:10px
+}
 
 	div{
 	display: flex;
 	align-items: center;
 }
-i{
-	margin-left: 10px;
-}
 
 input{
 	background-color: transparent;
 	outline: none;
-	color: #fff;
+	color: #bfbfc2;
 	margin-left: 0.5rem;
 	border: none;
 }

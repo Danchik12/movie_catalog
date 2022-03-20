@@ -1,12 +1,12 @@
 import Header from './components/elements/Header/Header'
 import {Routes,Route} from 'react-router-dom'
-import {Main} from './components/elements/Main/Main'
+import {Home} from './components/Home/Home'
 function App() {
   return (
     <div className="App">
     <Header/>
     <Routes>
-    <Route path='/' exact element={<Main/>} />
+    <Route path='/' exact element={<Home/>} />
   
     </Routes>
     </div>

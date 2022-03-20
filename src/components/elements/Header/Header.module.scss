@@ -1,22 +1,39 @@
-$gray:#9b9a97;
+
+.Header{
+	background-color:#26292e;
+	height: 60px;
+	display: flex;
+	justify-content: space-between;
+
+	
+}
 
 .brand{
 	display: flex;
 	margin-top: 15px;
 	margin-left: 15px;
 	font-size: 20px;
-	color: rgba($gray,0.9);
+	color:#eaebec;
 	text-decoration: none;
+&:hover{
+	color: #fff;
+	opacity: 0.6;
 
+}
 	
 }
 
 
-.Header{
-	
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
 
-	
+
+.auth{
+	font-size: 20px;
+	color:#eaebec;
+	text-decoration: none;
+	margin-right:15px;
+	margin-top:15px;
+	&:hover{
+		color: #fff;
+		opacity: 0.6;
+	}
 }

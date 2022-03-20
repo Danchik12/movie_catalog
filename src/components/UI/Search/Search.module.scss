@@ -1,8 +1,9 @@
 
 
 .search{
-	
+	width: 600px;
 	display: flex;
+	justify-content: space-between;
 	align-items: center;
 	border-radius: 30px;
 	background-color: #3a3f45;
@@ -11,13 +12,10 @@
 
 i{
 	color:#989896;
-	margin-right:10px
+	margin-right:15px ;
 }
 
-	div{
-	display: flex;
-	align-items: center;
-}
+	
 
 input{
 	background-color: transparent;

@@ -1,27 +1,25 @@
 import React from 'react'
-import {Navbar,Button,
-  Container,Form,FormControl} from 'react-bootstrap'
-
-
+import {NavLink} from 'react-router-dom'
+import s from './Header.module.scss'
+import {Search} from './../../UI/Search/Search'
 
 
 export default function Header(){
+
+  
+
 return(
-<Navbar  >
-  <Container fluid>
-    <Navbar.Brand href="/" >Movie App</Navbar.Brand>
-   
-      <Form className="d-flex">
-        <FormControl
-          type="search"
-          placeholder="Search"
-          className="me-2"
-          aria-label="Search"
-        />
-        <Button variant="outline-primary">Search</Button>
-      </Form>
-   
-  </Container>
-</Navbar>
+<div className={s.Header}>
+
+<NavLink  to="/" className={s.brand}>
+<i className='bx bx-movie-play bx-md'></i>
+Movie App
+</NavLink>
+<Search/>
+
+
+
+
+</div>
 )
 }

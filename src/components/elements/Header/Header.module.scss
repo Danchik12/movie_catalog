@@ -1,0 +1,22 @@
+$gray:#9b9a97;
+
+.brand{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 15px;
+	margin-left: 15px;
+
+	font-size:20px;
+	color: rgba($gray,0.9);
+	text-decoration: none;
+
+	
+}
+
+
+.Header{
+	display: flex;
+	justify-content: space-between;
+
+	
+}

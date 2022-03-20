@@ -1,8 +1,13 @@
 import Header from './components/elements/Header/Header'
+import {Routes} from 'react-router-dom'
 function App() {
   return (
     <div className="App">
-      <Header/>
+    <Header/>
+    <Routes>
+    
+    
+    </Routes>
     </div>
   );
 }

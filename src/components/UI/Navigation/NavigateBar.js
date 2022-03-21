@@ -6,7 +6,7 @@ export const NavigateBar = () => {
 		<span className={s.title}>НАВИГАЦИЯ</span>
 		<ul className={s.navigation}>
 		<li><NavLink to="/films">Фильмы</NavLink></li>
-		<li><NavLink to="/tv">TV Show</NavLink></li>
+		<li><NavLink to="/serials">Сериалы</NavLink></li>
 		
 		<li><NavLink to="/genres">Жанры</NavLink></li>
 		<br/>

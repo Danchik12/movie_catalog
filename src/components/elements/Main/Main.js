@@ -7,8 +7,10 @@ export const Main = () => {
 return (
 	<div className={s.container}>
 <div className={s.new}>Новинки
-<i className='bx bxs-left-arrow'></i>
-<i className='bx bxs-right-arrow'></i>
+<div className={s.controls}>
+<span className={s.control} ><i className='bx bxs-left-arrow' ></i></span>
+<span className={s.control}><i className='bx bxs-right-arrow'  ></i></span>
+</div>
 
 
 </div>
@@ -16,8 +18,10 @@ return (
 
 <div className={s.serials}>
 Сериалы
-<i className='bx bxs-left-arrow'></i>
-<i className='bx bxs-right-arrow'></i>
+<div className={s.controls} >
+<span className={s.control}><i className='bx bxs-left-arrow' ></i></span>
+<span className={s.control}><i className='bx bxs-right-arrow'  ></i></span>
+</div>
 
 
 </div>

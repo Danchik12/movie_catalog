@@ -1,4 +1,36 @@
 .container{
 	color: #9c9c9e;
 	font-size: 24px;
+	width: 100%;
+.new {
+	
+	display:flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-left: 20px;
 }
+
+.serials{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-left: 20px;
+	}
+
+.controls{
+	padding-right: 20px;
+}
+.control{
+	cursor: pointer;
+	padding-left: 10px;
+	&:hover, 
+	active{
+		color: #81ae65;
+	}
+}
+
+
+}
+
+
+

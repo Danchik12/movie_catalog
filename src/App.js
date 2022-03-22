@@ -7,7 +7,7 @@ function App() {
     <Header/>
     <Routes>
     <Route path='/' exact element={<Home/>} />
-  
+    
     </Routes>
     </div>
   );

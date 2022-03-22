@@ -5,12 +5,12 @@ export const NavigateBar = () => {
 		<div className={s.navigateBar}>
 		<span className={s.title}>НАВИГАЦИЯ</span>
 		<ul className={s.navigation}>
-		<li><NavLink to="/films">Фильмы</NavLink></li>
-		<li><NavLink to="/serials">Сериалы</NavLink></li>
+		<li><NavLink to="films">Фильмы</NavLink></li>
+		<li><NavLink to="serials">Сериалы</NavLink></li>
 		
-		<li><NavLink to="/genres">Жанры</NavLink></li>
+		<li><NavLink to="genres">Жанры</NavLink></li>
 		<br/>
-		<li><NavLink to="/bookmarks">Закладки</NavLink></li>
+		<li><NavLink to="bookmarks">Закладки</NavLink></li>
 		
 
 

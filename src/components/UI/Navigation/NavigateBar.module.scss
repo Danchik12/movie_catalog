@@ -1,6 +1,6 @@
 .navigateBar{
 	max-width: 250px;
-	height: 500px;
+	height: 400px;
 	width: 100%;
 	background-color: #2f3239;
 
@@ -17,8 +17,7 @@
 		list-style: none;
 		li{
 			padding-top:8px;
-		}
-		
+			
 		a{
 			text-decoration: none;
 			color: #9c9c9e;
@@ -26,6 +25,10 @@
 			&:hover{
 				color: #81ae65;
 			}
+
+		}
+		
+		
 
 		}
 	}

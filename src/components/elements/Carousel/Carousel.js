@@ -11,8 +11,6 @@ return (
 <span className={s.control} ><i className='bx bxs-left-arrow' ></i></span>
 <span className={s.control} ><i className='bx bxs-right-arrow'  ></i></span>
 </div>
-
-
 </div>
 
 
@@ -26,7 +24,7 @@ return (
 
 
 </div>
-	</div>
+</div>
 	)
 
 }

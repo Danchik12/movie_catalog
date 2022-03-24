@@ -3,32 +3,19 @@
 	font-size: 24px;
 	width: 100%;
 .new {
-	
-	display:flex;
-	align-items: center;
-	justify-content: space-between;
 	padding-left: 20px;
 }
 
 .serials{
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
 		padding-left: 20px;
 	}
 
-.controls{
-	padding-right: 20px;
-}
-.control{
-	cursor: pointer;
-	padding-left: 10px;
-	&:hover {
-		color: #81ae65;
-	}
+
 }
 
 
+.carousel{
+	display:flex;
 }
 
 

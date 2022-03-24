@@ -4,19 +4,38 @@
 	width: 100%;
 .new {
 	padding-left: 20px;
+	
 }
 
 .serials{
 		padding-left: 20px;
+	
 	}
 
 
 }
 
 
-.carousel{
+.list{
 	display:flex;
+	width:891px;
+	height:320px;
+	overflow:auto;
+
+	}
+
+
+.list::-webkit-scrollbar {
+height:10px;
 }
 
+.list::-webkit-scrollbar-track {
+ 
+  background-color:  #2f3239;
+  border-radius: 10px;
+}
 
-
+.list::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background:  #9c9c9e;
+}

@@ -17,25 +17,44 @@ title:'Superman',
 year:'2010'},
 {poster:'https://cdn.europosters.eu/image/1300/posters/doctor-who-day-of-the-doctor-i15143.jpg',
 title:'Doctor Who',
-year:'2002'}
+year:'2002'},
+{
+poster:'https://avatars.mds.yandex.net/get-kinopoisk-image/6201401/731c4031-7389-44f4-8c15-f9f4e3b0ed90/300x450',
+title:'Человек паук : Нет пути домой',
+year:'2021'
+
+},
+{
+poster:'https://avatars.mds.yandex.net/get-kinopoisk-image/1900788/5cadd28b-996e-4224-ab98-f7aed64aa56c/600x900',
+title:'Человек паук : Вдали от дома',
+year:'2019'
+},
+{
+poster:'https://upload.wikimedia.org/wikipedia/ru/5/5a/Spider-Man_Homecoming_logo.jpg',
+title:'Человек паук : Возвращение домой',
+year:'2017'
+}
+
 ]
 
 return (
 	<div className={s.container}>
 <div className={s.new}>Новинки
-<ul className={s.carousel}>
+
+<ul className={s.list}>
 {data.map((date,index) => 
 <Card movie={date} key={index}  />
 
 )}
 
 </ul>
+
 </div>
 
 
 <div className={s.serials}>
 Сериалы
-<ul className={s.carousel}>
+<ul className={s.list}>
 {data.map((date,index) => 
 <Card movie={date} key={index}  />
 

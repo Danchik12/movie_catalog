@@ -1,22 +1,22 @@
-import s from  './Carousel.module.scss'
+import s from  './Main.module.scss'
 import {Card} from './../Card/Card'
 
-export const Carousel = () => {
+export const Main = () => {
 var data=[
 {poster:'https://upload.wikimedia.org/wikipedia/ru/1/13/Batman_poster.jpg',
-title:'Batman',
+title:'Бэтмен',
 year:'2019'},
 {poster:'https://m.media-amazon.com/images/M/MV5BNzRmZWJhNjUtY2ZkYy00N2MyLWJmNTktOTAwY2VkODVmOGY3XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg',
-title:'Supernatural',
+title:'Сверхъестественное',
 year:'2005'},
 {poster:'https://www.kino-teatr.ru/movie/posters/big/3/35933.jpg',
-title:'Merlin',
+title:'Мерлин',
 year:'2004'},
 {poster:'https://www.film.ru/sites/default/files/movies/posters/superman_returns_ver8_xlg.jpg',
-title:'Superman',
+title:'Супермэн',
 year:'2010'},
 {poster:'https://cdn.europosters.eu/image/1300/posters/doctor-who-day-of-the-doctor-i15143.jpg',
-title:'Doctor Who',
+title:'Доктор Кто: День доктора',
 year:'2002'},
 {
 poster:'https://avatars.mds.yandex.net/get-kinopoisk-image/6201401/731c4031-7389-44f4-8c15-f9f4e3b0ed90/300x450',

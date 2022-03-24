@@ -1,4 +1,4 @@
-import {Carousel} from './../elements/Carousel/Carousel'
+import {Main} from './../elements/Main/Main'
 import s from './Home.module.scss'
 
 
@@ -8,8 +8,9 @@ export const Home =() =>{
 	
 	return (
 		
-		
-		<Carousel/>
+		<div className={s.home}>
+		<Main/>
+		</div>
 
 
 	

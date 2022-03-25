@@ -1,6 +1,7 @@
 import Header from './components/elements/Header/Header'
 import {Routes,Route} from 'react-router-dom'
 import {Home} from './components/Home/Home'
+import {Info} from './components/Info/Info'
 import {Bookmarks} from './components/Bookmarks/Bookmarks'
 import {NavigateBar} from './components/UI/Navigation/NavigateBar'
 function App() {
@@ -13,7 +14,7 @@ function App() {
     <Routes>
     <Route path='/' exact element={<Home/>} />
     <Route path='/bookmarks' exact element={<Bookmarks/>}/>
-
+    <Route path='/info/:id' exact element={<Info/>} />
     </Routes>
     </div>
     </div>

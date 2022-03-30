@@ -8,7 +8,7 @@ export const NavigateBar = () => {
 		<li><NavLink to="films">Фильмы</NavLink></li>
 		<li><NavLink to="serials">Сериалы</NavLink></li>
 		
-		<li><NavLink to="genres">Жанры</NavLink></li>
+		
 		<br/>
 		<li><NavLink to="bookmarks">Закладки</NavLink></li>
 		

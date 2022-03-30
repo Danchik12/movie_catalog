@@ -1,13 +1,16 @@
 @import './../../styles/variables.scss';
 
 .info{
+	margin-left:40px;
 	display:flex;
+	flex-direction: column;
 	width: 100%;
 }
 .information{
 	display:flex;
+	
 	width: 100%;
-	margin-left:40px;
+
 	margin-top: 40px;
 
 	
@@ -28,7 +31,30 @@
 	font-size: 26px;
 
 	display: flex;
-	
-	justify-content:space-between;
 	align-items: center;
+	justify-content:space-between;
+	
+}
+
+
+.parametr{
+display: flex;
+
+}
+.parametr_name{
+	font-size: 20px;
+	color: #6e6f75;
+}
+.parametr_value{
+	margin-left:50px;
+	color: #eaebec;
+	font-size: 20px;
+	margin-right: 40px;
+}
+
+.anotation{
+	color: #959699;
+	font-size: 18px;
+	margin-top: 20px;
+	margin-right: 40px;
 }

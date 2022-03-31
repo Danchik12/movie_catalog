@@ -1,4 +1,5 @@
 import {Main} from './../elements/Main/Main'
+
 import s from './Home.module.scss'
 
 

@@ -16,9 +16,7 @@ SMART<span style={{'color':'#81ae65'}}>Movies</span>
 </NavLink>
 
 <Search/>
-<NavLink  to="auth" className={s.auth}>
-Вход
-</NavLink>
+
 
 
 

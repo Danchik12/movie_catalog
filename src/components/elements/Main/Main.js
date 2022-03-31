@@ -9,9 +9,9 @@ const dispatch =useDispatch()
 	const {movies,isLoading ,serials} = useSelector((state) => state.movie)
 	
 //useEffect(()=>{
-//	dispatch(getTrendsMovie())
-//	dispatch(getTrendsSerial())
-//
+//dispatch(getTrendsMovie())
+//dispatch(getTrendsSerial())
+
 //},[])
 
 return (

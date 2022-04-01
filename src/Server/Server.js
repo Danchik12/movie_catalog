@@ -18,14 +18,9 @@ export function  getSerials(){
 
 }
 
-export function fetchMovie(){
+export function fetchInfo(type,id){
 
 }
-
-export function fetchSerial(){
-
-}
-
 
 
 export function Search(){

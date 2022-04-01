@@ -1,5 +1,5 @@
 import s from  './Main.module.scss'
-import {Card} from './../Card/Card'
+import {Carousel} from './../../UI/Carousel/Carousel'
 import React,{useEffect} from 'react'
 import Loader from './../../UI/Loader/Loader'
 import { getTrendsMovie,getTrendsSerial} from './../../../store/thunk/servis'
@@ -11,7 +11,6 @@ const dispatch =useDispatch()
 //useEffect(()=>{
 //dispatch(getTrendsMovie())
 //dispatch(getTrendsSerial())
-
 //},[])
 
 return (
@@ -21,29 +20,9 @@ return (
 <Loader/>
 	:
 	<>
-<div className={s.new}>Популярные фильмы
-
-<ul className={s.list}>
-{movies.results.map((data,index) => 
-<Card movie={data} key={index}  />
-
-)}
-
-</ul>
-
-</div>
-
-
-<div className={s.serials}>
-Популярные сериалы
-<ul className={s.list}>
-{serials.results.map((data,index) => 
-<Card movie={data} key={index}  />
-
-)}
-</ul>
-</div>
-</>
+	<Carousel  title='Популярные фильмы' datas={movies} />
+	<Carousel title='Популярные сериалы' datas={serials} />
+	</>
 }
 </div>
 

@@ -13,8 +13,8 @@ function App() {
     <NavigateBar />
     <Routes>
     <Route path='/' exact element={<Home/>} />
-    <Route path='/bookmarks' exact element={<Bookmarks/>}/>
-    <Route path='/info/:id' exact element={<Info/>} />
+    <Route path='/bookmarks'  element={<Bookmarks/>}/>
+    <Route path='/info/:type/:id'  element={<Info/>} />
     </Routes>
     </div>
     </div>

@@ -27,8 +27,10 @@ export const movieSlice = createSlice({
       
     },
     getInfoSuccess:(state,action) => {
-    state.info=action.payload.dada;
+
+    state.info = action.payload.data;
     state.isLoading=false;
+
   }
 
   

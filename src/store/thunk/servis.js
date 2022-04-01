@@ -34,6 +34,7 @@ export const getTrendsSerial = () => async (dispatch) => {
 			dispatch(movieSlice.actions.getLoading())
 			const response = await fetchInfo(type,id)
 			if (response.status === 200){
+				
 				dispatch(movieSlice.actions.getInfoSuccess(response))
 			}
 		}catch(e){

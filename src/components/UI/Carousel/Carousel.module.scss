@@ -1,5 +1,10 @@
+@import './../../../styles/variables.scss';
+
+
 .carousel {
+	color: $text-color;
 	padding-left: 20px;
+	font-size: 24px;
 	
 }
 .carousel__list{

@@ -7,7 +7,7 @@ export function getTrendMovie(){
 }
 
 export function getTrendSerial(){
-	return api.get('/trending/tv/week?')
+	return api.get('trending/tv/week?')
 }
 
 export function  getMovies(){
@@ -19,7 +19,7 @@ export function  getSerials(){
 }
 
 export function fetchInfo(type,id){
-
+ return api.get(`${type}/${id}?append_to_response=recommendations,videos&`)
 }
 
 

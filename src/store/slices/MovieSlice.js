@@ -3,8 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 const initialState = {
   movies:{},
   serials:{},
-  serial:{},
-  movie:{},
+  info:{},
   search:{},
   isLoading:true,
 }
@@ -26,13 +25,18 @@ export const movieSlice = createSlice({
       state.serials = action.payload.data;
       state.isLoading=false;
       
-    }
+    },
+    getInfoSuccess:(state,action) => {
+    state.info=action.payload.dada;
+    state.isLoading=false;
+  }
 
   
   },
+  
 })
 
 
-export const { getTrendMoviesSuccess,getTrendSerialsSuccess,getLoading} = movieSlice.actions
+export const { getTrendMoviesSuccess,getTrendSerialsSuccess,getLoading,getInfoSuccess} = movieSlice.actions
 
 export default movieSlice.reducer

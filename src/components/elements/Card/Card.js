@@ -7,7 +7,7 @@ export const Card = ({movie}) => {
 return (
 	
 	<div className={s.card}>
-	<Link to={'/info/'+movie.id}>
+	<Link to={'/info/'+movie.id} state={{id:movie.id,type:movie.media_type}}>
 	<img src= {'https://image.tmdb.org/t/p/original/'+movie.poster_path} alt={movie.title ? movie.title : movie.name} className={s.poster}/>
 	
 	

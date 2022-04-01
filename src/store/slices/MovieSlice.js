@@ -3,8 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 const initialState = {
   movies:{},
   serials:{},
-  serial:{},
-  movie:{},
+  info:{},
   search:{},
   isLoading:true,
 }

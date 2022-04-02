@@ -8,13 +8,29 @@ import {getInfo} from './../../store/thunk/servis'
 import YouTube from 'react-youtube';
 
 export const Info = () =>{
+	const renderVideo = () => {
+		const videos=info.videos.results;
+
+		
+
+		const rus_videos=videos.filter(video => video.iso_639_1 == 'ru')
+		if(rus_videos.length === 0){
+			const trailers=videos.filter(video => video.type=='Trailer' || video.type == 'Opening Credits')
+			return trailers[0].key 
+		}else{
+		 return rus_videos[0].key
+		}
+	}
 	const {type,id} = useParams()
 	const dispatch =useDispatch()
 	const {isLoading ,info} = useSelector((state) => state.movie)
 	useEffect(()=>{
 		dispatch(getInfo(type,id))
 	},[id])
-
+	const opts={
+		height:'400',
+		width:'700',
+	}
 	return (
 		
 		<div className={s.page}>
@@ -45,8 +61,15 @@ export const Info = () =>{
 		</p>
 		</div>
 		<div className={s.player}>
-		<YouTube videoId="2g811Eo7K8U" />
-		</div>
+		{ info.videos.results.length === 0
+			?  <span></span>
+
+			: 
+			<YouTube videoId={renderVideo()}      opts={opts}/>
+	   }
+	   </div>
+	
+		
 		<div className={s.similiar}>
 		<Carousel title={'Рекомендуем посмотреть'} datas={info.recommendations}/>
 		</div>

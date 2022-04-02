@@ -19,7 +19,7 @@ export function  getSerials(){
 }
 
 export function fetchInfo(type,id){
- return api.get(`${type}/${id}?append_to_response=recommendations,videos&`)
+ return api.get(`${type}/${id}?append_to_response=recommendations,videos&include_video_language=en,ru&`)
 }
 
 

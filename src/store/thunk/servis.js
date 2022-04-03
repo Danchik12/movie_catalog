@@ -1,4 +1,4 @@
-import {getTrendMovie,getTrendSerial,fetchInfo} from './../../Server/Server'
+import {getTrendMovie,getTrendSerial,fetchInfo,Search} from './../../Server/Server'
 import {movieSlice} from './../slices/MovieSlice'
 
 export const getTrendsMovie = () => async (dispatch) => {
@@ -36,6 +36,21 @@ export const getTrendsSerial = () => async (dispatch) => {
 			if (response.status === 200){
 				
 				dispatch(movieSlice.actions.getInfoSuccess(response))
+			}
+		}catch(e){
+			console.log(e)
+
+		}
+
+	}
+
+
+	export const getSearch =(query) => async( dispatch) => {
+		try{
+			dispatch(movieSlice.actions.getLoading())
+			const response =await Search (query) 
+			if(response.status === 200){
+				dispatch(movieSlice.actions.getSearch(response))
 			}
 		}catch(e){
 			console.log(e)

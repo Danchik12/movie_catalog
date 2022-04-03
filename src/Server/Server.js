@@ -23,7 +23,8 @@ export function fetchInfo(type,id){
 }
 
 
-export function Search(){
+export function Search(query){
+   return api.get(`search/multi?&query=${query}&page=1&`)
 
 
 }

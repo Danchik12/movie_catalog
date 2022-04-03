@@ -31,6 +31,10 @@ export const movieSlice = createSlice({
     state.info = action.payload.data;
     state.isLoading=false;
 
+  },
+  getSearch:(state,action)=>{
+    state.search=action.payload.data;
+    state.isLoading=false;
   }
 
   

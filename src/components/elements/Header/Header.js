@@ -1,5 +1,4 @@
 import React from 'react'
-
 import s from './Header.module.scss'
 import {Search} from './../../UI/Search/Search'
 
@@ -15,7 +14,7 @@ return(
 SMART<span style={{'color':'#81ae65'}}>Movies</span>
 </a>
 
-<Search/>
+<Search />
 
 
 

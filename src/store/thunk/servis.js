@@ -57,3 +57,9 @@ export const getTrendsSerial = () => async (dispatch) => {
 		}
 	}
 
+	export const addToFavorites = (movie) => (dispatch) => {
+		dispatch (movieSlice.actions.addFavorites(movie))
+	}
+	export const removeToFavorites = (movie) => (dispatch) => {
+		dispatch (movieSlice.actions.removeFavorites(movie))
+	}

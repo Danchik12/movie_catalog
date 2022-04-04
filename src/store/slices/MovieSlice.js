@@ -3,6 +3,9 @@ import { createSlice } from '@reduxjs/toolkit'
 const initialState = {
   movies:{},
   serials:{},
+  favorites:localStorage.getItem('bookmarks') 
+  ? JSON.parse(localStorage.getItem('bookmarks')) 
+  : [],
   info:{},
   search:{},
   isLoading:true,
@@ -35,7 +38,14 @@ export const movieSlice = createSlice({
   getSearch:(state,action)=>{
     state.search=action.payload.data;
     state.isLoading=false;
-  }
+  },
+  addFavorites:(state,action) => {
+  
+   state.favorites=[action.payload,...state.favorites]
+  },
+  removeFavorites:(state,action) => {
+     state.favorites=state.favorites.filter((movie=> movie.id !== action.payload.id))
+  },
 
   
   },
@@ -43,6 +53,6 @@ export const movieSlice = createSlice({
 })
 
 
-export const { getTrendMoviesSuccess,getTrendSerialsSuccess,getLoading,getInfoSuccess} = movieSlice.actions
+export const { getTrendMoviesSuccess,getTrendSerialsSuccess,getLoading,getInfoSuccess,addFavorites,removeFavorites} = movieSlice.actions
 
 export default movieSlice.reducer

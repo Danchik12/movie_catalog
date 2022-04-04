@@ -4,6 +4,7 @@ import {Home} from './components/Home/Home'
 import {Info} from './components/Info/Info'
 import {Bookmarks} from './components/Bookmarks/Bookmarks'
 import {NavigateBar} from './components/UI/Navigation/NavigateBar'
+import Catalog from './components/Catalog/Catalog'
 function App() {
   return (
     <div className="App">
@@ -12,9 +13,13 @@ function App() {
     <div className='d-flex'>
     <NavigateBar />
     <Routes>
+    
     <Route path='/' exact element={<Home/>} />
-    <Route path='/bookmarks'  element={<Bookmarks/>}/>
-    <Route path='/info/:type/:id'  element={<Info/>} />
+    <Route path='/bookmarks' exact element={<Bookmarks/>}/>
+    <Route  path='/films' exact element={<Catalog/>}/>
+    <Route  path='/serials' exact element={<Catalog/>}/>
+    <Route  path='/results' exact element={<Catalog/>}/>
+    <Route path='/info/:type/:id' exact  element={<Info/>} />
     </Routes>
     </div>
     </div>

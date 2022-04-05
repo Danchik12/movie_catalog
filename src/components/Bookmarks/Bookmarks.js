@@ -8,6 +8,10 @@ export const Bookmarks =() =>{
 	
 	return (
 	< div className={s.bookmark}>
+	<div className={s.container}>
+
+	
+
 
 	{ localStorage.getItem('bookmarks') || localStorage.getItem('bookmarks') == 0
 	?
@@ -19,6 +23,7 @@ export const Bookmarks =() =>{
 		
 	}
 
+</div>
 	</div>
 
 		)

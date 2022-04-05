@@ -14,6 +14,7 @@ export const Info = () =>{
 	useEffect(()=>{
 		dispatch(getInfo(type,id))
 	},[id])
+
 	const opts={
 		height:'400',
 		width:'700',
@@ -58,6 +59,7 @@ export const Info = () =>{
 	useEffect (() => {
   localStorage.setItem('bookmarks',JSON.stringify(favorites))
 },[favorites])
+
 	useEffect(()=>{
 		const favorite = JSON.parse(localStorage.getItem('bookmarks'))
 		console.log(favorite.find((movie) => movie.id === id) )
@@ -71,8 +73,8 @@ export const Info = () =>{
 	return (
 		
 		<div className={s.page}>
-		{ isLoading ?
-			<Loader />
+		{ isLoading 
+			? <Loader />
 			:
 			<>
 		<div className={s.information}>
@@ -81,8 +83,6 @@ export const Info = () =>{
 		<div className={s.title}>{info.title ? info.title : info.name}<div onClick={() => {{ isBookmark ? RemoveFavorites(info) :AddFavorites(info) }}} >
 		<i  className={isBookmark ? 'bx bxs-bookmark' :'bx bx-bookmark'} style={{'cursor':'pointer','marginRight': '50px'}}></i></div> 
 		</div>
-		
-		
 		<div className={s.parametr}><div className={s.parametr_name}>Страны : </div>  
 		<div className={s.parametr_value}>{info.production_countries.map(country => `${country.name} `)}</div></div>
 		<div className={s.parametr}><div className={s.parametr_name}>Время :</div>  
@@ -101,13 +101,9 @@ export const Info = () =>{
 		<div className={s.player}>
 		{ info.videos.results.length === 0
 			?  <span></span>
-
-			: 
-			<YouTube videoId={renderVideo()}      opts={opts}/>
+			: <YouTube videoId={renderVideo()}      opts={opts}/>
 	   }
 	   </div>
-	
-		
 		<div className={s.similiar}>
 		<Carousel title={'Рекомендуем посмотреть'} datas={info.recommendations}/>
 		</div>

@@ -1,10 +1,10 @@
 import s from './Search.module.scss'
-import {useDispatch,useSelector} from 'react-redux'
+import {useDispatch} from 'react-redux'
 import {getSearch} from './../../../store/thunk/servis'
 
 export const Search = () => {
 	const dispatch =useDispatch()
-		const {isLoading ,search} = useSelector((state) => state.movie)
+		
 	return (
 		<div className={s.search}>
 		

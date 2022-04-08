@@ -1,6 +1,13 @@
 
 
 .Catalog{
-	display:flex;
+	display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: 300px;
+  grid-gap: 15px;
+  padding: 25px;
+
+	width: 100%;
 	
 }

@@ -5,8 +5,7 @@ export const NavigateBar = () => {
 		<div className={s.navigateBar}>
 		<span className={s.title}>НАВИГАЦИЯ</span>
 		<ul className={s.navigation}>
-		<li><a href="/films">Фильмы</a></li>
-		<li><a href="/serials">Сериалы</a></li>
+	
 		
 		
 		<br/>

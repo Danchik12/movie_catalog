@@ -1,8 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-  movies:{},
-  serials:{},
+  trend_movies:{},
+  trend_serials:{},
   favorites:localStorage.getItem('bookmarks') 
   ? JSON.parse(localStorage.getItem('bookmarks')) 
   : [],
@@ -16,7 +16,8 @@ export const movieSlice = createSlice({
   initialState,
   reducers: {
   getTrendMoviesSuccess:(state,action) =>{
-      state.movies = action.payload.data;
+    
+      state.trend_movies = action.payload.data;
      
     }
   ,
@@ -25,7 +26,8 @@ export const movieSlice = createSlice({
   },
 
     getTrendSerialsSuccess:(state,action) =>{
-      state.serials = action.payload.data;
+       
+      state.trend_serials = action.payload.data;
       state.isLoading=false;
       
     },

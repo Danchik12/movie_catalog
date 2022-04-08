@@ -7,21 +7,23 @@ import Loader from './../UI/Loader/Loader'
 
 export const Home =() =>{
 const dispatch =useDispatch()
-const {movies,isLoading ,serials} = useSelector((state) => state.movie)
-	
-useEffect(()=>{
- dispatch(getTrendsMovie())
- dispatch(getTrendsSerial())
-},[])
+const {trend_movies,isLoading ,trend_serials} = useSelector((state) => state.movie)
 
+useEffect( ()=>{
+  dispatch(getTrendsMovie())
+  dispatch(getTrendsSerial())
+ 
+
+},[])
+  
 	return (
 		
 		<div className={s.home}>
 		{
-			isLoading ?
-			<Loader />
+			isLoading
+			? <Loader />
 			:
-			<Main movies={movies} serials={serials}/>
+			<Main movies={trend_movies} serials={trend_serials}/>
 		}
 		
 		</div>

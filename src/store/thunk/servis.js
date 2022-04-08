@@ -1,11 +1,13 @@
 import {getTrendMovie,getTrendSerial,fetchInfo,Search} from './../../Server/Server'
 import {movieSlice} from './../slices/MovieSlice'
 
-export const getTrendsMovie = () =>async  (dispatch) => {
+export const getTrendsMovie = () => async  (dispatch) => {
 
 	try {
 		dispatch(movieSlice.actions.getLoading())
-		const res =await  getTrendMovie()
+				const res = await  getTrendMovie()
+				
+
 		if (res.status === 200){
 			dispatch (movieSlice.actions.getTrendMoviesSuccess(res))
 		}
@@ -15,11 +17,14 @@ export const getTrendsMovie = () =>async  (dispatch) => {
 		console.log(e)
 	}
 }
-export const getTrendsSerial = () =>async  (dispatch) => {
+export const getTrendsSerial = () => async  (dispatch) => {
 	
 	try{
 		dispatch(movieSlice.actions.getLoading())
 		const response = await getTrendSerial()
+
+	
+
 		if (response.status === 200){
 			dispatch (movieSlice.actions.getTrendSerialsSuccess(response))
 		}
@@ -63,3 +68,5 @@ export const getTrendsSerial = () =>async  (dispatch) => {
 	export const removeToFavorites = (movie) => (dispatch) => {
 		dispatch (movieSlice.actions.removeFavorites(movie))
 	}
+
+

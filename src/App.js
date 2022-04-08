@@ -16,8 +16,6 @@ function App() {
     
     <Route path='/' exact element={<Home/>} />
     <Route path='/bookmarks' exact element={<Bookmarks/>}/>
-    <Route  path='/films' exact element={<Catalog/>}/>
-    <Route  path='/serials' exact element={<Catalog/>}/>
     <Route  path='/search' exact element={<Catalog/>}/>
     <Route path='/info/:type/:id' exact  element={<Info/>} />
     </Routes>

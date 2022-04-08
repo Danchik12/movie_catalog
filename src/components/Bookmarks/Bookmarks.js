@@ -13,12 +13,13 @@ export const Bookmarks =() =>{
 	
 
 
-	{ localStorage.getItem('bookmarks') || localStorage.getItem('bookmarks') == 0
+	{ localStorage.getItem('bookmarks') && localStorage.getItem('bookmarks').length !== 0
 	?
 		
 		 JSON.parse(localStorage.getItem('bookmarks')).map((data,index) => 
 			<Card movie={data} key={index} />
 		)
+
 		 :<span>Вы не добавили ничего в закладки</span>
 		
 	}

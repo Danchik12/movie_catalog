@@ -4,12 +4,10 @@ import {getInfo} from './../../../store/thunk/servis'
 import {useDispatch} from 'react-redux'
 export const Card = ({movie}) => {
 	const dispatch =useDispatch()
-	function info(type,id){
-		dispatch(getInfo(type,id))
-	}
+	
 
 return (
-	<Link to={'/info/'+movie.id} onClick={() => {info(movie.media_type,movie.id)}} >
+	<Link to={'/info/'+movie.id} onClick={() => {dispatch(getInfo(movie.media_type,movie.id))}} >
 	<div className={s.card}>
 	
 	

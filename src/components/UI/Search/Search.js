@@ -1,6 +1,6 @@
 import s from './Search.module.scss'
 import {useDispatch} from 'react-redux'
-import React,{useEffect} from 'react'
+import React from 'react'
 import {useNavigate,createSearchParams} from 'react-router-dom'
 import {getSearch} from './../../../store/thunk/servis'
 

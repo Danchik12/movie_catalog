@@ -1,19 +1,17 @@
 import s from './Info.module.scss'
-import {useParams} from 'react-router-dom'
 import Loader from './../UI/Loader/Loader'
 import {Carousel} from './../UI/Carousel/Carousel'
 import React,{useEffect,useState} from 'react'
 import {useDispatch,useSelector} from 'react-redux'
-import {getInfo,addToFavorites,removeToFavorites} from './../../store/thunk/servis'
+import {addToFavorites,removeToFavorites} from './../../store/thunk/servis'
+import {useParams} from 'react-router-dom'
 import YouTube from 'react-youtube';
 
 export const Info = () =>{
-	const {type,id} = useParams()
+	const id = useParams()
 	const dispatch =useDispatch()
 	const {isLoading ,info,favorites} = useSelector((state) => state.movie)
-	useEffect(()=>{
-		dispatch(getInfo(type,id))
-	},[id])
+	
 
 	const opts={
 		height:'400',
@@ -24,7 +22,7 @@ export const Info = () =>{
 		
 	
 	const AddFavorites = (movie) => {
-		let favorite_movie = Object.assign({}, movie, {media_type:type})
+		let favorite_movie = movie
 		dispatch(addToFavorites(favorite_movie))
 
 		setBookmark(true)

@@ -19,20 +19,21 @@
 
 	.navigation{
 		list-style: none;
+		font-size: 20px;
 		li{
 			padding-top:8px;
-			
-		a{
+			.a{
 			text-decoration: none;
 			color:$text-color;
-			font-size: 20px;
+			
 			&:hover{
 				color: $hover-text-color;
 			}
 
-		}
-		
-		
-
-		}
+			
+			}
+			}
 	}
+
+
+

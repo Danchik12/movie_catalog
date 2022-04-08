@@ -6,10 +6,10 @@ import {useSelector} from 'react-redux'
 
 
 
-export default function Catalog(){
+export default function Catalog({items}){
 	
-const {isLoading ,search} = useSelector((state) => state.movie)
-const items=search
+const {isLoading } = useSelector((state) => state.movie)
+
 			
 	
 
@@ -19,7 +19,7 @@ return(
 	{
 		isLoading 
 		? <Loader/>
-		:items.results.map(item => <Card movie={item} key={item.id}/>)
+		: items.results.map(item => <Card movie={item} key={item.id}/>)
 
 		
 

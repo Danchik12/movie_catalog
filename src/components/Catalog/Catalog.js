@@ -7,11 +7,16 @@ import {useSelector} from 'react-redux'
 
 
 export default function Catalog({items}){
-	
+
+
 const {isLoading } = useSelector((state) => state.movie)
 
-			
+
 	
+
+	
+
+
 
  
 return(

@@ -17,8 +17,16 @@ export function fetchInfo(type,id){
 }
 
 
-export function Search(query){
-   return api.get(`/search/multi?&query=${query}&page=1&`)
+export function Search(query,page){
+   return api.get(`/search/multi?&query=${query}&page=${page}&`)
 
 
+}
+
+export function fetchMovies(page){
+   return api.get(`/discover/movie?sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&with_watch_monetization_types=flatrate&`)
+}
+
+export function fetchSerials(page){
+   return api.get(`/discover/tv?sort_by=popularity.desc&page=${page}&include_null_first_air_dates=false&with_watch_monetization_types=flatrate&with_status=0&with_type=0&`)
 }

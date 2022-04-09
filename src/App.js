@@ -8,7 +8,7 @@ import Catalog from './components/Catalog/Catalog'
 import {useSelector} from 'react-redux'
 function App() {
 
-  const {isLoading,search } = useSelector((state) => state.movie)
+  const {isLoading,search,movies,serials } = useSelector((state) => state.movie)
   return (
     <div className="App">
 
@@ -20,6 +20,8 @@ function App() {
     <Route path='/' exact element={<Home/>} />
     <Route path='/bookmarks' exact element={<Bookmarks/>}/>
     <Route  path='/search' exact element={<Catalog items={search}/>}/>
+    <Route  path='/films' exact element={<Catalog items={movies}/>}/>
+    <Route  path='/serials' exact element={<Catalog items={serials}/>}/>
     <Route path='/info/:id' exact  element={<Info/>} />
     </Routes>
     </div>

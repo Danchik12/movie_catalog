@@ -1,6 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
+  movies:{},
+  serials:{},
   trend_movies:{},
   trend_serials:{},
   favorites:localStorage.getItem('bookmarks') 
@@ -48,6 +50,14 @@ export const movieSlice = createSlice({
   removeFavorites:(state,action) => {
      state.favorites=state.favorites.filter((movie=> movie.id !== action.payload.id))
   },
+  getMovie:(state,action) => {
+    state.movies=action.payload.data;
+    state.isLoading =false
+  },
+  getSerial:(state,action) => {
+    state.serials=action.payload.data;
+    state.isLoading =false
+  }
 
   
   },
@@ -55,6 +65,6 @@ export const movieSlice = createSlice({
 })
 
 
-export const { getTrendMoviesSuccess,getTrendSerialsSuccess,getLoading,getInfoSuccess,addFavorites,removeFavorites} = movieSlice.actions
+export const { getTrendMoviesSuccess,getTrendSerialsSuccess,getLoading,getInfoSuccess,addFavorites,removeFavorites,getMovie,getSerial} = movieSlice.actions
 
 export default movieSlice.reducer

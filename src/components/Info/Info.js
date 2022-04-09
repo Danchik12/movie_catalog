@@ -4,11 +4,13 @@ import {Carousel} from './../UI/Carousel/Carousel'
 import React,{useEffect,useState} from 'react'
 import {useDispatch,useSelector} from 'react-redux'
 import {addToFavorites,removeToFavorites} from './../../store/thunk/servis'
-import {useParams} from 'react-router-dom'
+import {useLocation} from 'react-router-dom'
 import YouTube from 'react-youtube';
 
 export const Info = () =>{
-	const id = useParams()
+	const location =useLocation()
+	
+	const {id,type} = location.state
 	const dispatch =useDispatch()
 	const {isLoading ,info,favorites} = useSelector((state) => state.movie)
 	
@@ -22,7 +24,8 @@ export const Info = () =>{
 		
 	
 	const AddFavorites = (movie) => {
-		let favorite_movie = movie
+		console.log(type)
+		let favorite_movie = Object.assign({media_type:type},movie)
 		dispatch(addToFavorites(favorite_movie))
 
 		setBookmark(true)
@@ -61,7 +64,7 @@ export const Info = () =>{
 	useEffect(()=>{
 		const favorite = JSON.parse(localStorage.getItem('bookmarks'))
 		console.log(favorite.find((movie) => movie.id === id) )
-		 if (favorite.find((movie) => movie.id == id || typeof movie.id == 'undefinded') ){
+		 if (favorite.find((movie) => movie.id == id && typeof movie.id != 'undefinded') ){
 		 	setBookmark(true)
 		 }else{
 		 	setBookmark(false)

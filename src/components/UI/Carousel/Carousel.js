@@ -9,7 +9,7 @@ return (
 
 <ul className={s.carousel__list}>
 {datas.results.map((data,index) => 
-<Card movie={data} key={index}  />
+<li><Card movie={data} key={index}  /></li>
 
 )}
 

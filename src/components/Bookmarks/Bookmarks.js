@@ -18,7 +18,8 @@ export const Bookmarks =() =>{
 		
 		 JSON.parse(localStorage.getItem('bookmarks')).map((data,index) => 
 			<Card movie={data} key={index} />
-		)
+			)
+		 
 
 		 :<span>Вы не добавили ничего в закладки</span>
 		

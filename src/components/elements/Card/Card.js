@@ -7,7 +7,8 @@ export const Card = ({movie}) => {
 	
 
 return (
-	<Link to={'/info/'+movie.id} onClick={() => {dispatch(getInfo(movie.media_type,movie.id))}} >
+	
+	<Link to={'/info/'+movie.id} state={{id:movie.id,type:movie.media_type}} onClick={() => {dispatch(getInfo(movie.media_type,movie.id))}} >
 	<div className={s.card}>
 	
 	
@@ -20,6 +21,7 @@ return (
 
 	</div>
 	</Link>
+	
 	
 
 	)
